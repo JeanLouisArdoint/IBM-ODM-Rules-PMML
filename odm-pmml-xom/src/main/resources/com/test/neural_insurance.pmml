@@ -2,23 +2,23 @@
   <Header copyright="DMG.org"/>
   <DataDictionary numberOfFields="5">
     <DataField name="gender" optype="categorical" dataType="string">
-      <Value value="  female"/>
-      <Value value="    male"/>
+      <Value value="female"/>
+      <Value value="male"/>
     </DataField>
     <DataField name="no of claims" optype="categorical" dataType="string">
-      <Value value="       0"/>
-      <Value value="       1"/>
-      <Value value="       3"/>
-      <Value value="     &amp;gt; 3"/>
-      <Value value="       2"/>
+      <Value value="0"/>
+      <Value value="1"/>
+      <Value value="3"/>
+      <Value value=">3"/>
+      <Value value="2"/>
     </DataField>
     <DataField name="domicile" optype="categorical" dataType="string">
       <Value value="suburban"/>
-      <Value value="   urban"/>
-      <Value value="   rural"/>
+      <Value value="urban"/>
+      <Value value="rural"/>
     </DataField>
     <DataField name="age of car" optype="continuous" dataType="double"/>
-    <DataField name="amount of claims" optype="continuous" dataType="integer"/>
+    <DataField name="amount of claims" optype="continuous" dataType="double"/>
   </DataDictionary>
   <NeuralNetwork modelName="Neural Insurance" functionName="regression" activationFunction="logistic" numberOfLayers="2">
     <MiningSchema>
@@ -40,32 +40,32 @@
       </NeuralInput>
       <NeuralInput id="1">
         <DerivedField optype="continuous" dataType="double">
-          <NormDiscrete field="gender" value="    male"/>
+          <NormDiscrete field="gender" value="male"/>
         </DerivedField>
       </NeuralInput>
       <NeuralInput id="2">
         <DerivedField optype="continuous" dataType="double">
-          <NormDiscrete field="no of claims" value="       0"/>
+          <NormDiscrete field="no of claims" value="0"/>
         </DerivedField>
       </NeuralInput>
       <NeuralInput id="3">
         <DerivedField optype="continuous" dataType="double">
-          <NormDiscrete field="no of claims" value="       1"/>
+          <NormDiscrete field="no of claims" value="1"/>
         </DerivedField>
       </NeuralInput>
       <NeuralInput id="4">
         <DerivedField optype="continuous" dataType="double">
-          <NormDiscrete field="no of claims" value="       3"/>
+          <NormDiscrete field="no of claims" value="3"/>
         </DerivedField>
       </NeuralInput>
       <NeuralInput id="5">
         <DerivedField optype="continuous" dataType="double">
-          <NormDiscrete field="no of claims" value="     &amp;gt; 3"/>
+          <NormDiscrete field="no of claims" value=">3"/>
         </DerivedField>
       </NeuralInput>
       <NeuralInput id="6">
         <DerivedField optype="continuous" dataType="double">
-          <NormDiscrete field="no of claims" value="       2"/>
+          <NormDiscrete field="no of claims" value="2"/>
         </DerivedField>
       </NeuralInput>
       <NeuralInput id="7">
@@ -75,12 +75,12 @@
       </NeuralInput>
       <NeuralInput id="8">
         <DerivedField optype="continuous" dataType="double">
-          <NormDiscrete field="domicile" value="   urban"/>
+          <NormDiscrete field="domicile" value="urban"/>
         </DerivedField>
       </NeuralInput>
       <NeuralInput id="9">
         <DerivedField optype="continuous" dataType="double">
-          <NormDiscrete field="domicile" value="   rural"/>
+          <NormDiscrete field="domicile" value="rural"/>
         </DerivedField>
       </NeuralInput>
     </NeuralInputs>
