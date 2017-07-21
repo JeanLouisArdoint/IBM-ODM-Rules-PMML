@@ -1,3 +1,9 @@
+/*
+Copyright (c) Jean-Louis Ardoint 2017. All Rights Reserved.
+Project name: IBM-ODM-Rules-PMML
+This project is licensed under the Apache License 2.0, see LICENSE.
+*/
+
 package com.test;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -7,6 +13,7 @@ public class Car {
 	int age;
 
 	// for JAXB
+	@SuppressWarnings("unused")
 	private Car() {}
 	
 	public Car(int numberOfClaims, int age) {

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="InsurancePremium" usingRuleflow="true" ruleflowName="ruleflow" targetRuleProjectName="ClaimDecision">
+  <name>InsurancePremium</name>
+  <uuid>a94b0142-50a5-4b1b-a7aa-efeb3730b97c</uuid>
+  <referencedVariables variableName="car" variableSetName="variables">
+    <variableSet href="../rules/variables.var#f5a4b3ea-0066-4f2f-abaa-49a0e5486fb8"/>
+  </referencedVariables>
+  <referencedVariables variableName="person" variableSetName="variables">
+    <variableSet href="../rules/variables.var#f5a4b3ea-0066-4f2f-abaa-49a0e5486fb8"/>
+  </referencedVariables>
+  <referencedVariables variableName="premium" variableSetName="variables" direction="OUT">
+    <variableSet href="../rules/variables.var#f5a4b3ea-0066-4f2f-abaa-49a0e5486fb8"/>
+  </referencedVariables>
+  <referencedVariables variableName="accepted" variableSetName="variables" direction="OUT">
+    <variableSet href="../rules/variables.var#f5a4b3ea-0066-4f2f-abaa-49a0e5486fb8"/>
+  </referencedVariables>
+  <ruleflow href="../rules/ruleflow.rfl#52421d0c-8c10-4e99-add2-afe0830ccc87"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="InsurancePremium_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../ClaimDecision#f9f0a373-31a9-464b-95ab-5b701d086370"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

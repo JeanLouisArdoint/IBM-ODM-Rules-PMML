@@ -1,0 +1,40 @@
+# Vocabulary Properties
+uuid = 612e4b2c-8d6d-4193-a6dc-b50a4749547f
+
+# com.test.Car
+com.test.Car#concept.label = car
+com.test.Car.age#phrase.action = set the age of {this} to {age}
+com.test.Car.age#phrase.navigation = {age} of {this}
+com.test.Car.numberOfClaims#phrase.action = set the number of claims of {this} to {number of claims}
+com.test.Car.numberOfClaims#phrase.navigation = {number of claims} of {this}
+
+# com.test.Domicile
+com.test.Domicile#concept.label = domicile
+com.test.Domicile.RURAL#instance.label = RURAL
+com.test.Domicile.SUBURBAN#instance.label = SUBURBAN
+com.test.Domicile.URBAN#instance.label = URBAN
+com.test.Domicile.valueOf(java.lang.String)#phrase.navigation = domicile.valueOf({0})
+com.test.Domicile.values()#phrase.navigation = domicile.values()
+
+# com.test.Gender
+com.test.Gender#concept.label = gender
+com.test.Gender.FEMALE#instance.label = FEMALE
+com.test.Gender.MALE#instance.label = MALE
+com.test.Gender.valueOf(java.lang.String)#phrase.navigation = gender.valueOf({0})
+com.test.Gender.values()#phrase.navigation = gender.values()
+
+# com.test.NeuralInsuranceEvaluator
+com.test.NeuralInsuranceEvaluator#concept.label = neural insurance evaluator
+com.test.NeuralInsuranceEvaluator.evaluate(com.test.Gender,int,com.test.Domicile,double)#phrase.navigation = {this} predicts claim amount using {0}, the number of claims {1}, {2} the age {3})\n
+com.test.NeuralInsuranceEvaluator.main(java.lang.String[])#phrase.action = neural insurance evaluator.main({0})
+
+# com.test.Person
+com.test.Person#concept.label = person
+com.test.Person.domicile#phrase.navigation = {domicile} of {this}
+com.test.Person.gender#phrase.navigation = {gender} of {this}
+com.test.Person.name#phrase.navigation = {name} of {this}
+com.test.Person.toString()#phrase.navigation = {this}.toString()
+
+# com.test.Util
+com.test.Util#concept.label = util
+com.test.Util.round(double,int)#phrase.navigation = round({0}, {1})

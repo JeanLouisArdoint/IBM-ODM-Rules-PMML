@@ -1,0 +1,58 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/ClaimDecision//odm-pmml-xom"
+property uuid "8a6e4537-bc42-4290-9566-af9691ccf396"
+package com.test;
+
+
+public class Car
+{
+    public int age;
+    public int numberOfClaims;
+    public Car(int arg1, int arg2);
+}
+
+public final class Domicile
+        extends java.lang.Enum
+{
+    domain {static SUBURBAN, static URBAN, static RURAL}
+    public static final readonly com.test.Domicile RURAL;
+    public static final readonly com.test.Domicile SUBURBAN;
+    public static final readonly com.test.Domicile URBAN;
+    public static com.test.Domicile valueOf(string arg);
+    public static com.test.Domicile[] values();
+}
+
+public final class Gender
+        extends java.lang.Enum
+{
+    domain {static FEMALE, static MALE}
+    public static final readonly com.test.Gender FEMALE;
+    public static final readonly com.test.Gender MALE;
+    public static com.test.Gender valueOf(string arg);
+    public static com.test.Gender[] values();
+}
+
+public class NeuralInsuranceEvaluator
+{
+    public NeuralInsuranceEvaluator(string arg)
+                throws java.io.IOException, org.xml.sax.SAXException, javax.xml.bind.JAXBException;
+    public double evaluate(com.test.Gender arg1, int arg2, com.test.Domicile arg3, double arg4);
+    public static void main(java.lang.String[] arg)
+                throws java.lang.Exception;
+}
+
+public class Person
+{
+    public readonly com.test.Domicile domicile;
+    public readonly com.test.Gender gender;
+    public readonly string name;
+    public Person(com.test.Gender arg1, string arg2, com.test.Domicile arg3);
+    public string toString();
+}
+
+public class Util
+{
+    public static double round(double arg1, int arg2);
+}
+

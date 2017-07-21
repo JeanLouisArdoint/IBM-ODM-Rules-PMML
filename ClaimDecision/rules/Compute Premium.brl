@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Compute Premium</name>
+  <uuid>0d2d6a15-6487-4598-ba19-569676ff1c3b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'predicted claim amount' to 'the evaluator' predicts claim amount using the gender of 'the person' , the number of claims the number of claims of 'the car' , the domicile of 'the person' the age the age of 'the car' ) ;
+if 'predicted claim amount' is less than 2000
+then
+set 'the premium' to round( 'predicted claim amount' * 0.1, 2) ;
+set 'accepted' to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

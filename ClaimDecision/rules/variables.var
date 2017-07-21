@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>variables</name>
+  <uuid>f5a4b3ea-0066-4f2f-abaa-49a0e5486fb8</uuid>
+  <variables name="evaluator" type="com.test.NeuralInsuranceEvaluator" initialValue="new com.test.NeuralInsuranceEvaluator(&quot;/com/test/neural_insurance.pmml&quot;)" verbalization="the evaluator"/>
+  <variables name="car" type="com.test.Car" initialValue="" verbalization="the car"/>
+  <variables name="person" type="com.test.Person" initialValue="" verbalization="the person"/>
+  <variables name="premium" type="double" initialValue="" verbalization="the premium"/>
+  <variables name="accepted" type="boolean" initialValue="" verbalization="accepted"/>
+</ilog.rules.studio.model.base:VariableSet>

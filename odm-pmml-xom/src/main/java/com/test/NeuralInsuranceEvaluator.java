@@ -1,3 +1,9 @@
+/*
+Copyright (c) Jean-Louis Ardoint 2017. All Rights Reserved.
+Project name: IBM-ODM-Rules-PMML
+This project is licensed under the Apache License 2.0, see LICENSE.
+*/
+
 package com.test;
 
 import java.io.IOException;
@@ -21,7 +27,10 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 /**
- *
+ * The neural insurance evaluator
+ * While a part of this code is specific to the PMML file being used, and it associated classes
+ * (Car, Domicile, Gender),
+ * some parts are fully generic, and could be reused to call a JPMML evaluation of any PMML file.
  */
 public class NeuralInsuranceEvaluator {
 
@@ -33,6 +42,16 @@ public class NeuralInsuranceEvaluator {
 		evaluator =  new NeuralNetworkEvaluator(pmml);
 	}
 
+	/**
+	 * Evaluate method.
+	 * This method is specific to the PMML file.
+	 * It is doing the mapping from its parameters to the generic JPMML format.
+	 * @param gender The gender of a owner
+	 * @param numberOfClaims The past number of claims
+	 * @param domicile The kind of domicile of the owner
+	 * @param ageOfCar The age of the car
+	 * @return a predicted claim amount
+	 */
 	public double evaluate(Gender gender,
 			int numberOfClaims,
 			Domicile domicile,
@@ -93,15 +112,6 @@ public class NeuralInsuranceEvaluator {
 
 		Map<FieldName, ?> output = evaluator.evaluate(arguments);
 		return output;
-	}
-
-	public static void main(String... args) throws Exception {
-		NeuralInsuranceEvaluator app = new NeuralInsuranceEvaluator("neural_insurance.pmml");
-		double result = app.evaluate(Gender.MALE, 3, Domicile.URBAN, 3.0);
-		System.out.println("Predicted claim amount: " + result);
-
-		result = app.evaluate(Gender.FEMALE, 5, Domicile.RURAL, 13.0);
-		System.out.println("Predicted claim amount: " + result);
 	}
 
 	protected PMML createPMMLfromFile(String fileName) throws IOException,
