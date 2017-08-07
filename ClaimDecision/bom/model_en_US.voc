@@ -25,7 +25,7 @@ com.test.Gender.values()#phrase.navigation = gender.values()
 
 # com.test.NeuralInsuranceEvaluator
 com.test.NeuralInsuranceEvaluator#concept.label = neural insurance evaluator
-com.test.NeuralInsuranceEvaluator.evaluate(com.test.Gender,int,com.test.Domicile,double)#phrase.navigation = {this} predicts claim amount using {0}, the number of claims {1}, {2} the age {3})\n
+com.test.NeuralInsuranceEvaluator.evaluate(com.test.Gender,int,com.test.Domicile,double)#phrase.navigation = the predicted claim amount computed by {this} for a person of gender: {0}, a number of claims: {1}, a domicile: {2} and a car of age: {3}
 com.test.NeuralInsuranceEvaluator.main(java.lang.String[])#phrase.action = neural insurance evaluator.main({0})
 
 # com.test.Person
