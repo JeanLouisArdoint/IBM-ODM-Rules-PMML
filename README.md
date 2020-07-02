@@ -17,7 +17,7 @@ You will need a Bluemix account. To write the Java code of the execution model, 
 Follow the instructions from [Business Rules Service](https://console.ng.bluemix.net/docs/services/rules/index-gentopic1.html)
 
 ## Documentation
-A link to the corresponding devWorks article will be added...
+[DevWorks article](https://www.ibm.com/developerworks/library/mw-1708-ardoint-bluemix/1708-ardoit.html)
 
 ## Still Have Questions?
 For general purpose questions, please use [StackOverflow](http://stackoverflow.com/questions/tagged/IBM-ODM).
